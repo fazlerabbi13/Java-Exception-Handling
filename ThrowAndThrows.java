@@ -1,18 +1,40 @@
-public class ThrowAndThrows {
-    static void fun(){
-        try {
-            throw new NullPointerException("null pointer");
-        } catch (NullPointerException e) {
-            System.out.println("caught inside fun()");
-            throw e;
-        }
-    }
+ public class ThrowAndThrows {
+//     static void fun(){
+//         try {
+//             throw new NullPointerException("null pointer");
+//         } catch (NullPointerException e) {
+//             System.out.println("caught inside fun()");
+//             throw e;
+//         }
+//     }
 
-    public static void main(String[] args) {
-        try {
-            fun();
-        } catch (NullPointerException e) {
-            System.out.println("caught in main.");
-        }
+//     public static void main(String[] args) {
+//         try {
+//             fun();
+//         } catch (NullPointerException e) {
+//             System.out.println("caught in main.");
+//         }
+//     }
+
+static void fun() throws IllegalAccessException{
+    System.out.println("inside fun");
+    throw new IllegalAccessException("first");
+}
+
+public static void main(String[] args) {
+    try{
+        fun();
+    }catch(IllegalAccessException e){
+        System.out.println("exception in main..");
     }
 }
+
+}
+
+
+
+
+
+
+
+
