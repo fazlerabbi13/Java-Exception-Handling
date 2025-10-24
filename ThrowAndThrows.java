@@ -12,6 +12,7 @@ public class ThrowAndThrows {
         try {
             fun();
         } catch (NullPointerException e) {
+            System.out.println("caught in main.");
         }
     }
 }
