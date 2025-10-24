@@ -11,6 +11,6 @@ public static void main(String[] args) {
         System.out.println("finally block always executes.");
     }
 
-    // System.out.println("program running");
+    System.out.println("program running");
 }
 }
